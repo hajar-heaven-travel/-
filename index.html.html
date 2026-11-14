@@ -1,0 +1,2506 @@
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;!DOCTYPE html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;html lang="ar" dir="rtl"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;meta charset="UTF-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;title&gt;<span dir="rtl"><span style="font-family:Arial">سباق أبطال السياحة </span>- <span style="font-family:Arial">لوحة تحفيز المبيعات</span></span><span dir="ltr">&lt;/title&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">استدعاء خطوط عربية عصرية من</span><span style="font-family:Arial"><span dir="ltr"></span> </span>Google Fonts --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- Tailwind CSS --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">مكتبة المؤثرات البصرية</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Confetti) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"&gt;&lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">مكتبة المؤثرات الصوتية</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Tone.js) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"&gt;&lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">أيقونات</span><span style="font-family:Arial"><span dir="ltr"></span> </span>FontAwesome --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; tailwind.config = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; theme: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; extend: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; fontFamily: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; cairo: ['Cairo', 'sans-serif'],
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; colors: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; skyBrand: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 50: '#f0f9ff',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 100: '#e0f2fe',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 500: '#0ea5e9',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 600: '#0284c7',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 700: '#0369a1',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 900: '#0c4a6e',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; goldBrand: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 400: '#fbbf24',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 500: '#f59e0b',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 600: '#d97706',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; animation: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 'float': 'float 3s ease-in-out infinite',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 'bounce-short': 'bounce 0.6s ease-in-out 2',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; keyframes: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; float: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; '0%, 100%': { transform: 'translateY(0px)' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; '50%': { transform: 'translateY(-6px)' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; body {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; font-family: 'Cairo', sans-serif;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 40%, #fef3c7 100%);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; min-height: 100vh;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; overflow-x: hidden;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; /* <span style="font-family:Arial" dir="rtl">مسار الطائرة المخصص</span><span style="font-family:Arial"><span dir="ltr"></span> </span>*/
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; .flight-track {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; background: repeating-linear-gradient(
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 90deg,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; #cbd5e1,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; #cbd5e1 10px,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; transparent 10px,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; transparent 20px
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; );
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; /* <span style="font-family:Arial" dir="rtl">حركة الطائرة مع اتجاه</span><span style="font-family:Arial"><span dir="ltr"></span> </span>RTL (<span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>من اليمين لليسار</span><span dir="ltr">) */</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; .plane-icon {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; transition: right 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; transform: scaleX(-1); /* <span style="font-family:Arial" dir="rtl">توجيه الطائرة لليسار لتناسب اتجاه التقدم العربي</span><span style="font-family:Arial"><span dir="ltr"></span> </span>*/
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; /* <span style="font-family:Arial" dir="rtl">تأثير زجاجي ناعم</span><span style="font-family:Arial"><span dir="ltr"></span> </span>*/
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; .glass-card {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; background: rgba(255, 255, 255, 0.92);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; backdrop-filter: blur(12px);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; border: 1px solid rgba(255, 255, 255, 0.6);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; /* <span style="font-family:Arial" dir="rtl">شريط التمرير المخصص للسجل</span><span style="font-family:Arial"><span dir="ltr"></span> </span>*/
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; ::-webkit-scrollbar {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; width: 6px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; ::-webkit-scrollbar-track {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; background: #f1f5f9;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; border-radius: 10px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; ::-webkit-scrollbar-thumb {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; background: #94a3b8;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; border-radius: 10px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;/head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;body class="text-slate-800 pb-12"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">خلفية زخرفية خفيفة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-20"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-plane-departure text-sky-400 text-8xl absolute top-12 left-10 animate-float"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-earth-africa text-amber-400 text-9xl absolute bottom-10 right-10"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-umbrella-beach text-sky-500 text-7xl absolute top-1/2 left-1/4"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">الشريط العلوي</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Header) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;header class="relative z-10 bg-gradient-to-l from-sky-700 via-sky-600 to-cyan-600 text-white shadow-lg rounded-b-3xl mb-6"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex flex-col md:flex-row items-center justify-between gap-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">شعار وعنوان الشركة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-3 text-center md:text-right"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-amber-400 text-sky-900 p-3 rounded-2xl shadow-md transform -rotate-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-plane-up text-2xl sm:text-3xl"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h1 class="text-2xl sm:text-3xl font-black tracking-tight flex items-center gap-2 justify-center md:justify-start"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;<span dir="rtl"><span style="font-family:Arial">رحلة الـ </span>50 <span style="font-family:Arial">عميل</span></span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xs bg-amber-400 text-sky-950 px-2.5 py-0.5 rounded-full font-extrabold"&gt;<span style="font-family:Arial" dir="rtl">تحدي المبيعات</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/h1&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-sky-100 text-sm sm:text-base font-medium"&gt;<span dir="rtl"><span style="font-family:Arial">كل حجز جديد بيقربك من القمة</span>.. <span style="font-family:Arial">انطلق يا بطل</span></span><span dir="ltr">! </span><span style="font-family:'Segoe UI Emoji'">🚀</span>&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span dir="rtl"><span style="font-family:Arial">أزرار التحكم العامة </span>(<span style="font-family:Arial">الصوت </span>+ <span style="font-family:Arial">إعادة الضبط</span>)</span><span dir="ltr"> --&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button id="soundToggleBtn" onclick="toggleSound()" class="flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm px-4 py-2.5 rounded-xl font-bold text-sm transition cursor-pointer border border-white/20" title="<span style="font-family:Arial" dir="rtl">تفعيل أو كتم المؤثرات الصوتية</span><span dir="ltr">"&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i id="soundIcon" class="fa-solid fa-volume-high text-amber-300"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span id="soundText"&gt;<span style="font-family:Arial" dir="rtl">الصوت مفعل</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="openResetModal()" class="flex items-center gap-2 bg-rose-500/80 hover:bg-rose-600 text-white px-4 py-2.5 rounded-xl font-bold text-sm transition cursor-pointer shadow-sm"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-rotate-right"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;<span style="font-family:Arial" dir="rtl">إعادة ضبط الشهر</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span dir="rtl"><span style="font-family:Arial">شريط هدف الشركة الإجمالي </span>(150 <span style="font-family:Arial">عميل</span>)</span><span dir="ltr"> --&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="mt-6 bg-sky-900/40 backdrop-blur-md rounded-2xl p-4 border border-white/15"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex flex-wrap items-center justify-between gap-2 mb-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-trophy text-amber-400 text-xl"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="font-bold text-base sm:text-lg"&gt;<span dir="rtl"><span style="font-family:Arial">الهدف الإجمالي للشركة </span>(<span style="font-family:Arial">تارجت الفريق</span>)</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="text-left"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span id="totalCompanyCount" class="text-2xl sm:text-3xl font-black text-amber-300"&gt;0&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-sky-200 font-bold text-sm sm:text-base"&gt;/ 150 <span style="font-family:Arial" dir="rtl">عميل</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span id="totalCompanyPercent" class="mr-2 bg-amber-400/20 text-amber-200 text-xs font-extrabold px-2 py-1 rounded-lg"&gt;0%&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="w-full bg-sky-950/60 h-4 rounded-full overflow-hidden p-0.5 border border-white/10"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div id="totalCompanyBar" class="bg-gradient-to-l from-amber-400 via-yellow-300 to-emerald-400 h-full rounded-full transition-all duration-700 ease-out" style="width: 0%"&gt;&lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/header&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">المحتوى الرئيسي</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span dir="rtl"><span style="font-family:Arial">بانر الرسالة التشجيعية الفورية </span>(<span style="font-family:Arial">يظهر ويتفاعل عند إضافة حجز</span>)</span><span dir="ltr"> --&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;div id="cheerBanner" class="glass-card rounded-2xl p-4 sm:p-5 shadow-md border-r-8 border-amber-400 flex items-center justify-between gap-4 transition-all duration-300"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div id="cheerEmoji" class="text-3xl sm:text-4xl bg-amber-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-inner"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; <span style="font-family:'Segoe UI Emoji'">✈️</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xs font-bold uppercase tracking-wider text-sky-600 block mb-0.5"&gt;<span style="font-family:Arial" dir="rtl">رسالة الكابتن للفريق</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h2 id="cheerMessage" class="text-lg sm:text-xl font-extrabold text-slate-800"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; <span dir="rtl"><span style="font-family:Arial">أهلاً بأبطال السياحة</span>! <span style="font-family:Arial">مين هيحقق أول حجز النهاردة ويطير بالصدارة؟</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">🔥</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/h2&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-100 px-3 py-2 rounded-xl"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-bolt text-amber-500"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;<span dir="rtl"><span style="font-family:Arial">اضغط </span>"+ <span style="font-family:Arial">إضافة حجز</span>" <span style="font-family:Arial">للانطلاق</span></span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">بطاقات موظفي المبيعات الثلاثة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;section&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="repsContainer"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">سيتم توليد البطاقات ديناميكياً عبر</span><span style="font-family:Arial"><span dir="ltr"></span> </span>JavaScript --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/section&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span dir="rtl"><span style="font-family:Arial">القسم السفلي</span>: <span style="font-family:Arial">لوحة الشرف </span>+ <span style="font-family:Arial">سجل الحجوزات المباشر</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;section class="grid grid-cols-1 lg:grid-cols-12 gap-6"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">لوحة الشرف والترتيب</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Leaderboard) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="lg:col-span-5 glass-card rounded-3xl p-6 shadow-md border border-slate-200/80"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-between mb-5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-2.5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-amber-100 text-amber-600 w-10 h-10 rounded-xl flex items-center justify-center text-xl"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-crown"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h3 class="text-xl font-black text-slate-800"&gt;<span style="font-family:Arial" dir="rtl">لوحة الشرف والصدارة</span><span dir="ltr">&lt;/h3&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-xs text-slate-500 font-semibold"&gt;<span style="font-family:Arial" dir="rtl">ترتيب الأبطال حسب عدد العملاء المحقق</span><span dir="ltr">&lt;/p&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div id="leaderboardList" class="space-y-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">يتم تعبئتها ديناميكياً</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">شريط الأخبار وسجل الحجوزات المباشر</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="lg:col-span-7 glass-card rounded-3xl p-6 shadow-md border border-slate-200/80 flex flex-col"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-between mb-5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-2.5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-sky-100 text-sky-600 w-10 h-10 rounded-xl flex items-center justify-center text-xl"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-tower-broadcast"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h3 class="text-xl font-black text-slate-800"&gt;<span style="font-family:Arial" dir="rtl">رادار الحجوزات المباشر</span><span dir="ltr">&lt;/h3&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-xs text-slate-500 font-semibold"&gt;<span style="font-family:Arial" dir="rtl">آخر التحركات والإنجازات المسجلة للفريق</span><span dir="ltr">&lt;/p&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"&gt;&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; <span style="font-family:Arial" dir="rtl">مباشر</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div id="activityLog" class="space-y-2.5 max-h-64 overflow-y-auto pr-1 flex-1"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">يتم تعبئتها ديناميكياً</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/section&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/main&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">نافذة تعديل بيانات الموظف</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Modal) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;div id="editModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl transform transition-all"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-between mb-4 border-b pb-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h3 class="text-xl font-black text-slate-800 flex items-center gap-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-user-pen text-sky-600"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;<span style="font-family:Arial" dir="rtl">تعديل بيانات الموظف</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/h3&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="closeEditModal()" class="text-slate-400 hover:text-slate-600 text-xl p-1 cursor-pointer"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;form id="editRepForm" onsubmit="saveRepEdit(event)" class="space-y-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;input type="hidden" id="editRepId"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;label class="block text-sm font-bold text-slate-700 mb-1"&gt;<span style="font-family:Arial" dir="rtl">اسم الموظف</span><span dir="ltr">&lt;/label&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;input type="text" id="editRepName" required maxlength="20" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-bold text-slate-800" placeholder="<span dir="rtl"><span style="font-family:Arial">مثال</span>: <span style="font-family:Arial">أحمد</span></span><span dir="ltr">"&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;label class="block text-sm font-bold text-slate-700 mb-2"&gt;<span dir="rtl"><span style="font-family:Arial">اختر أيقونة </span>/ <span style="font-family:Arial">شخصية الموظف</span></span><span dir="ltr">&lt;/label&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="grid grid-cols-6 gap-2" id="avatarSelector"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">خيارات الأفاتار</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;input type="hidden" id="editRepAvatar"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;label class="block text-sm font-bold text-slate-700 mb-1"&gt;<span dir="rtl"><span style="font-family:Arial">الهدف المطلوب </span>(<span style="font-family:Arial">التارجت</span>)</span><span dir="ltr">&lt;/label&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;input type="number" id="editRepTarget" min="1" max="500" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-bold text-slate-800"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-end gap-3 pt-4 border-t"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button type="button" onclick="closeEditModal()" class="px-5 py-2.5 rounded-xl font-bold text-slate-600 hover:bg-slate-100 transition cursor-pointer"&gt;<span style="font-family:Arial" dir="rtl">إلغاء</span><span dir="ltr">&lt;/button&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button type="submit" class="px-6 py-2.5 rounded-xl font-bold bg-sky-600 hover:bg-sky-700 text-white shadow-md transition cursor-pointer"&gt;<span style="font-family:Arial" dir="rtl">حفظ التعديلات</span><span dir="ltr">&lt;/button&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/form&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">نافذة تأكيد إعادة ضبط الشهر</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(<span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>بديل مخصص لـ</span><span style="font-family:Arial"><span dir="ltr"></span> </span>confirm) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;div id="resetModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl text-center"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-triangle-exclamation"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h3 class="text-xl font-black text-slate-800 mb-2"&gt;<span style="font-family:Arial" dir="rtl">بدء شهر جديد؟</span><span dir="ltr">&lt;/h3&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-slate-600 text-sm mb-6 leading-relaxed"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; <span dir="rtl"><span style="font-family:Arial">سيتم تصفير عدادات الحجوزات لجميع الموظفين </span>(0 <span style="font-family:Arial">عميل</span>) <span style="font-family:Arial">ومسح سجل الحجوزات المباشر، مع الاحتفاظ بأسماء الموظفين</span>. <span style="font-family:Arial">هل أنت متأكد؟</span></span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-center gap-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="closeResetModal()" class="flex-1 py-3 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition cursor-pointer"&gt;<span style="font-family:Arial" dir="rtl">تراجع</span><span dir="ltr">&lt;/button&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="confirmResetMonth()" class="flex-1 py-3 rounded-xl font-bold text-white bg-rose-600 hover:bg-rose-700 shadow-md transition cursor-pointer"&gt;<span style="font-family:Arial" dir="rtl">نعم، ابدأ شهر جديد</span><span dir="ltr">&lt;/button&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">منطق التطبيق الكامل</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(JavaScript) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 1. <span style="font-family:Arial" dir="rtl">البيانات الافتراضية والإعدادات</span><span style="font-family:Arial"><span dir="ltr"></span> </span>---
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; const AVATAR_OPTIONS = ['<span style="font-family:'Segoe UI Emoji'">🧑</span>‍<span style="font-family:'Segoe UI Emoji'">✈️</span>', '<span style="font-family:'Segoe UI Emoji'">👩</span>‍<span style="font-family:'Segoe UI Emoji'">✈️</span>', '<span style="font-family:'Segoe UI Emoji'">🦸</span>‍<span style="font-family:'Segoe UI Emoji'">♂️</span>', '<span style="font-family:'Segoe UI Emoji'">🦸</span>‍<span style="font-family:'Segoe UI Emoji'">♀️</span>', '<span style="font-family:'Segoe UI Emoji'">🦁</span>', '<span style="font-family:'Segoe UI Emoji'">🦅</span>', '<span style="font-family:'Segoe UI Emoji'">🌟</span>', '<span style="font-family:'Segoe UI Emoji'">🚀</span>', '<span style="font-family:'Segoe UI Emoji'">🧳</span>', '<span style="font-family:'Segoe UI Emoji'">🌍</span>', '<span style="font-family:'Segoe UI Emoji'">👑</span>', '<span style="font-family:'Segoe UI Emoji'">🔥</span>'];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; const DEFAULT_DATA = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; soundEnabled: true,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; reps: [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { id: 1, name: '<span style="font-family:Arial" dir="rtl">أحمد</span><span dir="ltr">', count: 12, target: 50, avatar: '</span><span style="font-family:'Segoe UI Emoji'">🧑</span>‍<span style="font-family:'Segoe UI Emoji'">✈️</span>', color: 'sky' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { id: 2, name: '<span style="font-family:Arial" dir="rtl">سارة</span><span dir="ltr">', count: 26, target: 50, avatar: '</span><span style="font-family:'Segoe UI Emoji'">👩</span>‍<span style="font-family:'Segoe UI Emoji'">✈️</span>', color: 'amber' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { id: 3, name: '<span style="font-family:Arial" dir="rtl">محمود</span><span dir="ltr">', count: 8, target: 50, avatar: '</span><span style="font-family:'Segoe UI Emoji'">🦸</span>‍<span style="font-family:'Segoe UI Emoji'">♂️</span>', color: 'emerald' }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ],
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logs: [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { id: 101, text: '<span dir="rtl"><span style="font-family:Arial">سارة حققت إنجاز نص الطريق </span>(25/50) <span style="font-family:Arial">وحصلت على وسام الكابتن</span></span><span dir="ltr">! </span><span style="font-family:'Segoe UI Emoji'">🏅</span>', time: '<span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>منذ قليل</span><span dir="ltr">', type: 'milestone' },</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { id: 102, text: '<span dir="rtl"><span style="font-family:Arial">أحمد سجل حجز جديد</span>! <span style="font-family:Arial">وصل لـ </span>12/50 <span style="font-family:Arial">عميل</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">✈️</span>', time: '<span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>اليوم</span><span dir="ltr">', type: 'booking' }</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ]
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; let appState = loadState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">تحميل البيانات من</span><span style="font-family:Arial"><span dir="ltr"></span> </span>localStorage <span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>أو استخدام الافتراضية</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>function loadState() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; try {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const saved = localStorage.getItem('tourism_sales_gamified_v1');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (saved) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return JSON.parse(saved);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } catch (e) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; console.error('Error loading state:', e);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return JSON.parse(JSON.stringify(DEFAULT_DATA));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">حفظ البيانات في</span><span style="font-family:Arial"><span dir="ltr"></span> </span>localStorage
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function saveState() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; try {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; localStorage.setItem('tourism_sales_gamified_v1', JSON.stringify(appState));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } catch (e) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; console.error('Error saving state:', e);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 2. <span style="font-family:Arial" dir="rtl">المؤثرات الصوتية باستخدام</span><span style="font-family:Arial"><span dir="ltr"></span> </span>Tone.js ---
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; let synth = null;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function initAudio() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (!synth &amp;&amp; typeof Tone !== 'undefined') {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth = new Tone.PolySynth(Tone.Synth).toDestination();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.volume.value = -8;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function playCelebrationSound(isMilestone = false, isComplete = false) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (!appState.soundEnabled) return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; try {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; initAudio();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (Tone.context.state !== 'running') {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Tone.start();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const now = Tone.now();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (isComplete) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span dir="rtl"><span style="font-family:Arial">نغمة انتصار كاملة عند الوصول لـ </span>50</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("C5", "16n", now);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("E5", "16n", now + 0.1);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("G5", "16n", now + 0.2);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("C6", "4n", now + 0.3);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else if (isMilestone) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">نغمة ترقية مستوى</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>synth.triggerAttackRelease("E5", "16n", now);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("G5", "16n", now + 0.12);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("B5", "8n", now + 0.24);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">نغمة حجز عادي مبهجة</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>synth.triggerAttackRelease("G5", "32n", now);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; synth.triggerAttackRelease("C6", "16n", now + 0.08);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } catch (e) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; console.warn('Audio playback skipped:', e);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function toggleSound() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.soundEnabled = !appState.soundEnabled;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; saveState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; updateSoundUI();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (appState.soundEnabled) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; playCelebrationSound(false, false);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function updateSoundUI() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const icon = document.getElementById('soundIcon');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const text = document.getElementById('soundText');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (appState.soundEnabled) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; icon.className = 'fa-solid fa-volume-high text-amber-300';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; text.textContent = '<span style="font-family:Arial" dir="rtl">الصوت مفعل</span><span dir="ltr">';</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; icon.className = 'fa-solid fa-volume-xmark text-slate-300';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; text.textContent = '<span style="font-family:Arial" dir="rtl">الصوت مكتوم</span><span dir="ltr">';</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 3. <span style="font-family:Arial" dir="rtl">الرسائل التشجيعية والأوسمة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Gamification Logic) ---
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function getMilestoneInfo(count, target) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const ratio = count / target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (count &gt;= target) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { title: '<span style="font-family:Arial" dir="rtl">بطل المبيعات الأسطوري</span><span dir="ltr">', icon: '</span><span style="font-family:'Segoe UI Emoji'">👑</span>', badgeColor: 'bg-amber-100 text-amber-800 border-amber-300', level: 4 };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else if (ratio &gt;= 0.8) { // 40+
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { title: '<span dir="rtl"><span style="font-family:Arial">المرحلة الأخيرة </span>(<span style="font-family:Arial">قناص</span>)</span><span dir="ltr">', icon: '</span><span style="font-family:'Segoe UI Emoji'">🔥</span>', badgeColor: 'bg-rose-100 text-rose-800 border-rose-300', level: 3 };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else if (ratio &gt;= 0.5) { // 25+
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { title: '<span style="font-family:Arial" dir="rtl">كابتن نص الطريق</span><span dir="ltr">', icon: '</span><span style="font-family:'Segoe UI Emoji'">🏅</span>', badgeColor: 'bg-sky-100 text-sky-800 border-sky-300', level: 2 };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else if (ratio &gt;= 0.2) { // 10+
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { title: '<span style="font-family:Arial" dir="rtl">انطلاقة صاروخية</span><span dir="ltr">', icon: '</span><span style="font-family:'Segoe UI Emoji'">🚀</span>', badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300', level: 1 };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { title: '<span style="font-family:Arial" dir="rtl">تجهيز للإقلاع</span><span dir="ltr">', icon: '</span><span style="font-family:'Segoe UI Emoji'">🛫</span>', badgeColor: 'bg-slate-100 text-slate-600 border-slate-200', level: 0 };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function getEncouragingMessage(rep) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const { name, count, target } = rep;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const remaining = Math.max(0, target - count);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const ratio = count / target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (count === target) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🏆</span>', msg: `<span style="font-family:Arial" dir="rtl">مبرووووك يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>قفلت الـ </span><span dir="ltr">${target} </span><span dir="rtl"><span style="font-family:Arial"><span dir="rtl"></span>عميل بنجاح ساحق</span>! <span style="font-family:Arial">أنت أسطورة المبيعات</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">🎉</span>` };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (count &gt; target) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🌟</span>', msg: `<span style="font-family:Arial" dir="rtl">عديت التارجت يا </span><span dir="ltr">${name}! (${count}/${target}) </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>أداء خيالي ومكافأة مستحقة بجدارة</span><span dir="ltr">! </span><span style="font-family:'Segoe UI Emoji'">🚀</span>` };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (remaining === 1) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">😱</span>', msg: `<span style="font-family:Arial" dir="rtl">عميل واحد فقط يا </span><span dir="ltr">${name} </span><span dir="rtl"><span style="font-family:Arial"><span dir="rtl"></span>وتقفل التارجت</span>! <span style="font-family:Arial">يلا الضربة القاضية</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">🔥</span>` };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (remaining &lt;= 5) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">⚡</span>', msg: `<span style="font-family:Arial" dir="rtl">فاضلك </span><span dir="ltr">${remaining} </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>عملاء بس يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>شايفين خط النهاية قدامك، وحش</span><span dir="ltr">! </span><span style="font-family:'Segoe UI Emoji'">💪</span>` };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (ratio &gt;= 0.8) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🔥</span>', msg: `<span style="font-family:Arial" dir="rtl">دخلت منطقة الخطر يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>وصلت لـ </span><span dir="ltr">${count}/${target}.. </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>الـ </span><span dir="ltr">${target} </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>بتقرب جداً</span><span dir="ltr">!` };</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (count === Math.floor(target / 2)) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🎯</span>', msg: `<span style="font-family:Arial" dir="rtl">عاش يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>وصلت لنص الطريق بالظبط</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(${count}/${target})! <span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>كمل بنفس القوة</span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">✈️</span>` };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (ratio &gt;= 0.5) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">✈️</span>', msg: `<span style="font-family:Arial" dir="rtl">طيارتك في السحاب يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>عديت النص</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(${count}/${target}) <span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>ولسه القادم أقوى</span><span dir="ltr">!` };</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (ratio &gt;= 0.2) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🚀</span>', msg: `<span style="font-family:Arial" dir="rtl">انطلاقة ولا أروع يا </span><span dir="ltr">${name}! (${count}/${target}) </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>طيارتك أقلعت خلاص واستعد للتحليق</span><span dir="ltr">!` };</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const starters = [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `<span style="font-family:Arial" dir="rtl">بداية قوية يا </span><span dir="ltr">${name}! (${count}/${target}) </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>كل رحلة ألف ميل بتبدأ بحجز</span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">💪</span>`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `<span dir="rtl"><span style="font-family:Arial">عاش يا بطل</span>! <span style="font-family:Arial">حجز جديد لـ </span></span><span dir="ltr">${name} (${count}/${target}).. </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>استمر يا نجم</span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">⭐</span>`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `<span style="font-family:Arial" dir="rtl">تسلم إيدك يا </span><span dir="ltr">${name}! </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>العداد بيتحرك</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(${count}/${target}) <span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>والمركز الأول بيناديك</span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">🏆</span>`
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return { emoji: '<span style="font-family:'Segoe UI Emoji'">🎉</span>', msg: starters[count % starters.length] };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 4. <span dir="rtl"><span style="font-family:Arial">التفاعلات الرئيسية </span>(<span style="font-family:Arial">إضافة </span>/ <span style="font-family:Arial">تراجع</span>)</span><span dir="ltr"> ---</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function addBooking(repId) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const rep = appState.reps.find(r =&gt; r.id === repId);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (!rep) return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const prevMilestone = getMilestoneInfo(rep.count, rep.target);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rep.count += 1;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const newMilestone = getMilestoneInfo(rep.count, rep.target);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const isMilestoneUp = newMilestone.level &gt; prevMilestone.level;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const isTargetReached = rep.count === rep.target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">تحديث البانر التشجيعي</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>const cheer = getEncouragingMessage(rep);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const banner = document.getElementById('cheerBanner');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('cheerEmoji').textContent = cheer.emoji;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('cheerMessage').textContent = cheer.msg;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">حركة نبض للبانر</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>banner.classList.remove('scale-[1.01]', 'bg-amber-50');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; void banner.offsetWidth; // trigger reflow
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; banner.classList.add('scale-[1.01]', 'bg-amber-50');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; setTimeout(() =&gt; banner.classList.remove('scale-[1.01]', 'bg-amber-50'), 600);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">إضافة للسجل المباشر</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>const nowTime = new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; let logText = `${rep.avatar} ${rep.name} <span dir="rtl"><span style="font-family:Arial">سجل حجز جديد</span>! <span style="font-family:Arial">وصل لـ </span></span><span dir="ltr">${rep.count}/${rep.target} </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>عميل</span><span dir="ltr">`;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; let logType = 'booking';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (isTargetReached) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logText = `<span style="font-family:'Segoe UI Emoji'">🏆</span> <span style="font-family:Arial" dir="rtl">إنجاز تاريخي</span><span dir="ltr">! ${rep.name} </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>قفل التارجت الكامل</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(${rep.target}/${rep.target})! <span style="font-family:'Segoe UI Emoji'">🎉</span>`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logType = 'milestone';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else if (isMilestoneUp) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logText = `${newMilestone.icon} <span style="font-family:Arial" dir="rtl">ترقية</span><span dir="ltr">! ${rep.name} </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>فتح وسام</span><span style="font-family:Arial"><span dir="ltr"></span> </span>"${newMilestone.title}" (${rep.count}/${rep.target})`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logType = 'milestone';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.logs.unshift({
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; id: Date.now(),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; text: logText,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; time: nowTime,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; type: logType
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span dir="rtl"><span style="font-family:Arial">الاحتفاظ بآخر </span>20 <span style="font-family:Arial">حدث فقط</span></span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>if (appState.logs.length &gt; 20) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.logs.pop();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">تشغيل المؤثرات الصوتية والبصرية</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>playCelebrationSound(isMilestoneUp, isTargetReached);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; triggerConfetti(isTargetReached || isMilestoneUp);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; saveState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderAll();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function removeBooking(repId) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const rep = appState.reps.find(r =&gt; r.id === repId);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (!rep || rep.count &lt;= 0) return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rep.count -= 1;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const nowTime = new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.logs.unshift({
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; id: Date.now(),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; text: `<span style="font-family:'Segoe UI Emoji'">↩️</span> <span style="font-family:Arial" dir="rtl">تم التراجع عن حجز لـ </span><span dir="ltr">${rep.name} (</span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>الرصيد الحالي</span><span dir="ltr">: ${rep.count}/${rep.target})`,</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; time: nowTime,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; type: 'undo'
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; saveState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderAll();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function triggerConfetti(bigBurst = false) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (typeof confetti !== 'function') return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (bigBurst) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; confetti({
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; particleCount: 120,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; spread: 80,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; origin: { y: 0.6 },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; colors: ['#0ea5e9', '#f59e0b', '#10b981', '#f43f5e']
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; confetti({
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; particleCount: 45,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; spread: 55,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; origin: { y: 0.7 },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; colors: ['#0ea5e9', '#fbbf24', '#38bdf8']
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 5. <span style="font-family:Arial" dir="rtl">رسم الواجهة وتحديث البيانات</span><span style="font-family:Arial"><span dir="ltr"></span> </span>---
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function renderAll() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderCompanyTotal();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderRepsCards();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderLeaderboard();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderLogs();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; updateSoundUI();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function renderCompanyTotal() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const totalCount = appState.reps.reduce((sum, r) =&gt; sum + r.count, 0);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const totalTarget = appState.reps.reduce((sum, r) =&gt; sum + r.target, 0);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const percent = totalTarget &gt; 0 ? Math.min(100, Math.round((totalCount / totalTarget) * 100)) : 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('totalCompanyCount').textContent = totalCount;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.querySelector('#totalCompanyCount + span').textContent = `/ ${totalTarget} <span style="font-family:Arial" dir="rtl">عميل</span><span dir="ltr">`;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('totalCompanyPercent').textContent = `${percent}%`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('totalCompanyBar').style.width = `${percent}%`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function renderRepsCards() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const container = document.getElementById('repsContainer');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">تحديد المتصدر الحالي لإعطائه تاج التميز</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>const maxCount = Math.max(...appState.reps.map(r =&gt; r.count));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; container.innerHTML = appState.reps.map(rep =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const percentage = Math.min(100, Math.round((rep.count / rep.target) * 100));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const remaining = Math.max(0, rep.target - rep.count);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const milestone = getMilestoneInfo(rep.count, rep.target);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const isLeader = rep.count &gt; 0 &amp;&amp; rep.count === maxCount;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const isCompleted = rep.count &gt;= rep.target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">ألوان مخصصة لكل بطاقة</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>const themeMap = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; sky: { border: 'border-sky-200', headerBg: 'from-sky-500 to-cyan-600', btn: 'bg-sky-600 hover:bg-sky-700 shadow-sky-200', bar: 'from-sky-400 to-sky-600' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; amber: { border: 'border-amber-200', headerBg: 'from-amber-500 to-orange-500', btn: 'bg-amber-500 hover:bg-amber-600 shadow-amber-200', bar: 'from-amber-400 to-orange-500' },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; emerald: { border: 'border-emerald-200', headerBg: 'from-emerald-500 to-teal-600', btn: 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-200', bar: 'from-emerald-400 to-teal-600' }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const theme = themeMap[rep.color] || themeMap.sky;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="glass-card rounded-3xl shadow-lg border-2 ${isCompleted ? 'border-amber-400 ring-4 ring-amber-400/20' : theme.border} overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">رأس البطاقة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-gradient-to-l ${theme.headerBg} p-4 text-white flex items-center justify-between relative"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-3xl shadow-inner border border-white/30 relative"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ${rep.avatar}
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ${isLeader ? '&lt;span class="absolute -top-3 -right-2 text-xl drop-shadow" title="<span style="font-family:Arial" dir="rtl">المتصدر حالياً</span><span dir="ltr">"&gt;</span><span style="font-family:'Segoe UI Emoji'">👑</span>&lt;/span&gt;' : ''}
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h3 class="text-xl font-black"&gt;${rep.name}&lt;/h3&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="openEditModal(${rep.id})" class="text-white/75 hover:text-white text-xs bg-black/15 hover:bg-black/25 p-1.5 rounded-lg transition cursor-pointer" title="<span style="font-family:Arial" dir="rtl">تعديل الاسم أو الهدف</span><span dir="ltr">"&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-pen"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="inline-flex items-center gap-1 text-xs font-bold bg-black/20 px-2.5 py-0.5 rounded-full mt-1"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;${milestone.icon}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;${milestone.title}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">النسبة المئوية</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="text-left bg-white/15 px-3 py-1.5 rounded-2xl backdrop-blur-sm"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xl font-black block leading-none"&gt;${percentage}%&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-[10px] font-bold opacity-90"&gt;<span style="font-family:Arial" dir="rtl">مُنجز</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">العداد الرقمي الكبير</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="p-5 pb-3 text-center"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="inline-flex items-baseline justify-center gap-1.5 bg-slate-50 px-6 py-3 rounded-2xl border border-slate-200/80 shadow-inner"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-5xl font-black text-slate-800 tracking-tight"&gt;${rep.count}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-lg font-bold text-slate-400"&gt;/ ${rep.target} <span style="font-family:Arial" dir="rtl">عميل</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-xs font-bold mt-2.5 ${isCompleted ? 'text-emerald-600' : 'text-slate-500'}"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ${isCompleted 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ? '<span style="font-family:'Segoe UI Emoji'">🎉</span> <span dir="rtl"><span style="font-family:Arial">تم تحقيق الهدف بنجاح</span>! <span style="font-family:Arial">كل عميل إضافي بونص إضافي</span></span><span dir="ltr">!' </span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; : `<span style="font-family:Arial" dir="rtl">متبقي </span><span dir="ltr">&lt;span class="text-slate-800 font-black"&gt;${remaining}&lt;/span&gt; </span><span style="font-family:Arial" dir="rtl"><span dir="rtl"></span>عميل للوصول للهدف</span><span dir="ltr">`}</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">مسار الطائرة التفاعلي</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Game Progress Track) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="px-5 py-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="relative pt-6 pb-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">الطائرة المتحركة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="plane-icon absolute top-0 text-2xl text-sky-600 drop-shadow-sm z-20" style="right: calc(${percentage}% - 14px);"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; <span style="font-family:'Segoe UI Emoji'">✈️</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">شريط التقدم</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="w-full h-4 bg-slate-200 rounded-full overflow-hidden p-0.5 relative shadow-inner"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="bg-gradient-to-l ${theme.bar} h-full rounded-full transition-all duration-700 ease-out" style="width: ${percentage}%"&gt;&lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">نقاط التفتيش</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Milestones: 0, 10, 25, 40, 50) --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex justify-between text-[11px] font-extrabold text-slate-400 mt-1.5 px-0.5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="${rep.count &gt;= 0 ? 'text-sky-600' : ''}"&gt;0&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="${rep.count &gt;= Math.round(rep.target*0.2) ? 'text-emerald-600' : ''}"&gt;<span style="font-family:'Segoe UI Emoji'">🚀</span> ${Math.round(rep.target*0.2)}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="${rep.count &gt;= Math.round(rep.target*0.5) ? 'text-sky-600' : ''}"&gt;<span style="font-family:'Segoe UI Emoji'">🏅</span> ${Math.round(rep.target*0.5)}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="${rep.count &gt;= Math.round(rep.target*0.8) ? 'text-rose-500' : ''}"&gt;<span style="font-family:'Segoe UI Emoji'">🔥</span> ${Math.round(rep.target*0.8)}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="${rep.count &gt;= rep.target ? 'text-amber-500' : ''}"&gt;<span style="font-family:'Segoe UI Emoji'">🏆</span> ${rep.target}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span style="font-family:Arial" dir="rtl">شريط الأوسمة المفتوحة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>--&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xs font-bold text-slate-400"&gt;<span style="font-family:Arial" dir="rtl">الأوسمة</span><span dir="ltr">:&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-1.5"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="w-7 h-7 rounded-lg flex items-center justify-center text-sm border ${rep.count &gt;= Math.round(rep.target*0.2) ? 'bg-emerald-50 border-emerald-300 opacity-100' : 'bg-slate-50 border-slate-200 opacity-30 grayscale'}" title="<span style="font-family:Arial" dir="rtl">وسام الانطلاقة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(20%)"&gt;<span style="font-family:'Segoe UI Emoji'">🚀</span>&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="w-7 h-7 rounded-lg flex items-center justify-center text-sm border ${rep.count &gt;= Math.round(rep.target*0.5) ? 'bg-sky-50 border-sky-300 opacity-100' : 'bg-slate-50 border-slate-200 opacity-30 grayscale'}" title="<span style="font-family:Arial" dir="rtl">وسام نص الطريق</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(50%)"&gt;<span style="font-family:'Segoe UI Emoji'">🏅</span>&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="w-7 h-7 rounded-lg flex items-center justify-center text-sm border ${rep.count &gt;= Math.round(rep.target*0.8) ? 'bg-rose-50 border-rose-300 opacity-100' : 'bg-slate-50 border-slate-200 opacity-30 grayscale'}" title="<span style="font-family:Arial" dir="rtl">وسام المرحلة الأخيرة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(80%)"&gt;<span style="font-family:'Segoe UI Emoji'">🔥</span>&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="w-7 h-7 rounded-lg flex items-center justify-center text-sm border ${rep.count &gt;= rep.target ? 'bg-amber-50 border-amber-400 opacity-100 animate-bounce-short' : 'bg-slate-50 border-slate-200 opacity-30 grayscale'}" title="<span style="font-family:Arial" dir="rtl">كأس التارجت الكامل</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(100%)"&gt;<span style="font-family:'Segoe UI Emoji'">🏆</span>&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;!-- <span dir="rtl"><span style="font-family:Arial">أزرار التحكم </span>(<span style="font-family:Arial">إضافة حجز </span>+ <span style="font-family:Arial">تراجع</span>)</span><span dir="ltr"> --&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="p-4 bg-slate-50/80 border-t border-slate-100 flex items-center gap-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="addBooking(${rep.id})" class="flex-1 ${theme.btn} text-white font-black py-3.5 px-4 rounded-2xl shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2 text-base cursor-pointer"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-circle-plus text-lg"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span&gt;<span style="font-family:Arial" dir="rtl">إضافة حجز جديد</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; 
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button onclick="removeBooking(${rep.id})" ${rep.count === 0 ? 'disabled' : ''} class="p-3.5 rounded-2xl border border-slate-200 bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 text-slate-400 font-bold transition disabled:opacity-40 disabled:pointer-events-none cursor-pointer" title="<span dir="rtl"><span style="font-family:Arial">تراجع </span>(-1 <span style="font-family:Arial">حجز</span>)</span><span dir="ltr">"&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-minus"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }).join('');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function renderLeaderboard() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const list = document.getElementById('leaderboardList');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const sorted = [...appState.reps].sort((a, b) =&gt; b.count - a.count);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const rankStyles = [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { medal: '<span style="font-family:'Segoe UI Emoji'">🥇</span>', bg: 'bg-gradient-to-l from-amber-50 to-yellow-100/70 border-amber-300', badge: '<span style="font-family:Arial" dir="rtl">المركز الأول</span><span dir="ltr">' },</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { medal: '<span style="font-family:'Segoe UI Emoji'">🥈</span>', bg: 'bg-slate-50 border-slate-200', badge: '<span style="font-family:Arial" dir="rtl">المركز الثاني</span><span dir="ltr">' },</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; { medal: '<span style="font-family:'Segoe UI Emoji'">🥉</span>', bg: 'bg-orange-50/50 border-orange-200/70', badge: '<span style="font-family:Arial" dir="rtl">المركز الثالث</span><span dir="ltr">' }</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; list.innerHTML = sorted.map((rep, index) =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const style = rankStyles[index] || rankStyles[2];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const pct = Math.min(100, Math.round((rep.count / rep.target) * 100));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-between p-3.5 rounded-2xl border ${style.bg} transition-all"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center gap-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-2xl w-8 text-center"&gt;${style.medal}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-2xl bg-white w-10 h-10 rounded-xl flex items-center justify-center shadow-sm"&gt;${rep.avatar}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;h4 class="font-black text-slate-800 text-base"&gt;${rep.name}&lt;/h4&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xs font-bold text-slate-500"&gt;${style.badge} • ${pct}% <span style="font-family:Arial" dir="rtl">من الهدف</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="text-left"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xl font-black text-slate-800"&gt;${rep.count}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-xs font-bold text-slate-400 block"&gt;<span style="font-family:Arial" dir="rtl">عميل</span><span dir="ltr">&lt;/span&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }).join('');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function renderLogs() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const logContainer = document.getElementById('activityLog');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (appState.logs.length === 0) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logContainer.innerHTML = `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="text-center py-8 text-slate-400"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;i class="fa-solid fa-plane-slash text-3xl mb-2 block opacity-50"&gt;&lt;/i&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;p class="text-sm font-bold"&gt;<span dir="rtl"><span style="font-family:Arial">لا توجد حجوزات مسجلة بعد</span>.. <span style="font-family:Arial">ابدأ الآن</span></span><span dir="ltr">!&lt;/p&gt;</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; logContainer.innerHTML = appState.logs.map(log =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; let rowStyle = 'bg-slate-50 border-slate-100 text-slate-700';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (log.type === 'milestone') rowStyle = 'bg-amber-50 border-amber-200 text-amber-950 font-bold';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (log.type === 'undo') rowStyle = 'bg-rose-50/50 border-rose-100 text-slate-500 text-xs';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; return `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;div class="flex items-center justify-between gap-3 p-3 rounded-xl border ${rowStyle} text-sm transition-all"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="leading-snug"&gt;${log.text}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;span class="text-[11px] font-bold text-slate-400 shrink-0 bg-white px-2 py-0.5 rounded-md border border-slate-100"&gt;${log.time}&lt;/span&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }).join('');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // --- 6. <span style="font-family:Arial" dir="rtl">إدارة النوافذ المنبثقة</span><span style="font-family:Arial"><span dir="ltr"></span> </span>(Modals) ---
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function openEditModal(repId) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const rep = appState.reps.find(r =&gt; r.id === repId);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (!rep) return;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('editRepId').value = rep.id;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('editRepName').value = rep.name;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('editRepTarget').value = rep.target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('editRepAvatar').value = rep.avatar;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const avatarContainer = document.getElementById('avatarSelector');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; avatarContainer.innerHTML = AVATAR_OPTIONS.map(av =&gt; `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;button type="button" onclick="selectAvatar('${av}')" class="avatar-opt text-2xl p-2 rounded-xl border-2 transition cursor-pointer ${av === rep.avatar ? 'border-sky-500 bg-sky-50 scale-105' : 'border-slate-200 hover:bg-slate-50'}"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ${av}
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; `).join('');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const modal = document.getElementById('editModal');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.remove('hidden');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.add('flex');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function selectAvatar(av) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('editRepAvatar').value = av;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.querySelectorAll('.avatar-opt').forEach(btn =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (btn.textContent.trim() === av) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; btn.className = 'avatar-opt text-2xl p-2 rounded-xl border-2 transition cursor-pointer border-sky-500 bg-sky-50 scale-105';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; } else {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; btn.className = 'avatar-opt text-2xl p-2 rounded-xl border-2 transition cursor-pointer border-slate-200 hover:bg-slate-50';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function closeEditModal() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const modal = document.getElementById('editModal');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.add('hidden');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.remove('flex');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function saveRepEdit(e) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; e.preventDefault();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const id = parseInt(document.getElementById('editRepId').value);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const name = document.getElementById('editRepName').value.trim();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const target = parseInt(document.getElementById('editRepTarget').value);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const avatar = document.getElementById('editRepAvatar').value;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const rep = appState.reps.find(r =&gt; r.id === id);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; if (rep &amp;&amp; name &amp;&amp; target &gt; 0) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rep.name = name;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rep.target = target;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rep.avatar = avatar;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; saveState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderAll();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; closeEditModal();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function openResetModal() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const modal = document.getElementById('resetModal');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.remove('hidden');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.add('flex');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function closeResetModal() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; const modal = document.getElementById('resetModal');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.add('hidden');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; modal.classList.remove('flex');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; function confirmResetMonth() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.reps.forEach(r =&gt; r.count = 0);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; appState.logs = [{
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; id: Date.now(),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; text: '<span style="font-family:'Segoe UI Emoji'">🔄</span> <span dir="rtl"><span style="font-family:Arial">تم بدء شهر جديد وتصفير العدادات</span>! <span style="font-family:Arial">بالتوفيق يا أبطال</span></span><span style="font-family:Arial"><span dir="ltr"></span> </span><span style="font-family:'Segoe UI Emoji'">🚀</span>',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; time: '<span style="font-family:Arial" dir="rtl">الآن</span><span dir="ltr">',</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; type: 'milestone'
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; }];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('cheerEmoji').textContent = '<span style="font-family:'Segoe UI Emoji'">🚀</span>';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; document.getElementById('cheerMessage').textContent = '<span dir="rtl"><span style="font-family:Arial">شهر جديد وتحدي جديد</span>! <span style="font-family:Arial">مين هيفتح أول حجز وياخد الصدارة؟</span></span><span dir="ltr">';</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; saveState();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderAll();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; closeResetModal();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; // <span style="font-family:Arial" dir="rtl">تشغيل التطبيق عند تحميل الصفحة</span>
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>&#xa0;<span style="font-family:Arial"> </span>window.onload = function() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; renderAll();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &#xa0; &#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0; &#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;/body&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&lt;/html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:8pt">
+				&#xa0;
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a><span style="font-size:11px; color: #d0d0d0"> | </span><a href="https://documentconverter.pro/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Document Converter for Windows</a></p>
